@@ -1,0 +1,21 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1682334288172-88e43f2d7d59?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW5zJTIwYnklMjBuaWdodHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000');
+    background-size: cover;
+    background-position: center;
+}
+
+.bbh-sans-bartle-regular {
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.middle-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
