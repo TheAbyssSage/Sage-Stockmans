@@ -9,13 +9,7 @@ html {
     background-position: top center; 
     background-size: cover;
     position: relative;
-    min-height: 50vh;
-}
-
-/* Responsive variables */
-:root {
-  --menu-height: 70px; /* default desktop menu height */
-  --max-content-width: 900px;
+    height: 500px;
 }
 
 .bbh-sans-bartle-regular {
@@ -32,6 +26,7 @@ hr,
   display: block;
   width: 100%;
   margin: 1.25rem 0;
+  margin-top: 600px;   
 }
 
 /* ----------------------- */
@@ -41,14 +36,13 @@ hr,
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--menu-height);
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     color: black;
-  background-color: rgba(187, 187, 187, 0.05);
+    background-color: rgba(187, 187, 187, 0.05);
     backdrop-filter: blur(8px);
 }
 
@@ -60,11 +54,6 @@ hr,
     justify-content: space-between;
     color: #EECB8C;
     cursor: pointer;
-}
-
-/* avoid fixed menu overlapping content */
-body {
-  padding-top: var(--menu-height);
 }
 
 li {
