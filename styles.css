@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .home {
     background-color: black;
     background-image: url('Logo\'s/home.png');
@@ -14,7 +18,16 @@
   font-style: normal;
 }
 
-
+hr,
+.spacer {
+  border: none;
+  height: 2px;
+  background-color: #000;
+  display: block;
+  width: 100%;
+  margin: 1.25rem 0;
+  margin-top: 600px;   
+}
 
 /* ----------------------- */
 /* Top bar */
@@ -125,6 +138,109 @@ a:hover, a:focus, a:active {
 
 
 /* ----------------------- */
+/* Syntax */
+:root {
+  --bg: #0f1320;
+  --card: rgba(255, 255, 255, 0.231);
+  --text: #e6e9f2;
+  --muted: #a7b0c4;
+  --accent: #EECB8C; /* subtle teal dev accent */
+  --ring: rgba(100, 255, 218, 0.25);
+}
+
+.skills {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  justify-items: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  position: relative;
+  justify-items: center;
+}
+
+.skills h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+
+}
+
+@media (max-width: 860px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
+
+.skill-card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 1rem 1rem 1.25rem;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    0 0 0 0 rgba(100,255,218,0); /* ring on hover */
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.45), 0 0 0 6px var(--ring);
+  border-color: rgba(100,255,218,0.35);
+}
+
+.skill-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.4px;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  color: var(--text);
+}
+
+.skill-card li::before {
+  content: "▸";
+  color: var(--muted);
+  font-size: 0.95rem;
+  transform: translateY(-1px);
+}
+
+.skill-card span {
+  color: var(--text);
+  opacity: 0.92;
+}
+
+
+
+/* ----------------------- */
 /* Contact info */
 .contact {
   display: flex;
@@ -230,17 +346,51 @@ a:hover, a:focus, a:active {
 }
 
 
+/* ----------------------------------------------- */
 
-/* ----------------------- */
-/* Spacer / horizontal rule styling */
-hr,
-.spacer {
-    border: none;
-    height: 2px;
-    background-color: #000;
-    display: block;
-    width: 100%;
-    margin: 1.25rem 0;
-    margin-top: 600px;   
+
+/* Projects */
+.projects_home {
+  background-color: #1B2835;
+  background-image: url('Logo\'s/projects_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center; 
+  background-size: cover;
+  position: relative;
+  height: 600px;
 }
 
+/* .fade {
+  mask-image: linear-gradient( #000, rgba(0,0,0,0));
+} */
+
+
+/* ----------------------- */
+/* Projects list */
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Glass card */
+.projects > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 600px;
+  font-size: large;
+  box-sizing: border-box;
+  padding: 20px 20px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  outline: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35))
+            drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
