@@ -1,0 +1,246 @@
+.home {
+    background-color: black;
+    background-image: url('Logo\'s/home.png');
+    background-repeat: no-repeat;
+    background-position: top center; 
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+
+.bbh-sans-bartle-regular {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* ----------------------- */
+/* Top bar */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    color: black;
+    background-color: rgba(187, 187, 187, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.menu > div {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    color: #EECB8C;
+    cursor: pointer;
+}
+
+li {
+    display: inline;
+    margin-right: 15px;
+}
+
+a, a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+/* ----------------------- */
+/* Title top of page */
+.top {
+    display:flex;
+    align-items: center;
+    padding-top: 150px;
+    font-size: 40px;
+    justify-content: center;
+    color:white;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-position: top center; 
+    background-size: cover;
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.6ch;
+    animation: blink 1s steps(1, start) infinite;
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+
+
+/* ----------------------- */
+/* About page */
+.about {
+    display: flex;
+    align-content: center; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 90px;
+    box-shadow: white;
+}
+
+.about > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 600px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.231);
+    box-sizing: border-box;
+    padding: 20px; 
+    padding-bottom: 40px;
+    border-radius: 20px;
+}
+
+.about > div p {
+    font-size: large;
+}
+
+
+
+/* ----------------------- */
+/* Contact info */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.contact > div {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  background: transparent;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.231);
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 15px 10px;
+  border-radius: 5em;
+  border-right: 20px;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.email {
+  background-color: #ea4335;
+}
+
+.email svg {
+  fill: #f2f2f2;
+}
+
+.email:hover svg {
+  fill: #ea4335;
+}
+
+.phone {
+  background-color: #34a853;
+}
+
+.phone svg {
+  fill: #f2f2f2;
+}
+
+.phone:hover svg {
+  fill: #34a853;
+}
+
+
+
+/* ----------------------- */
+/* Spacer / horizontal rule styling */
+hr,
+.spacer {
+    border: none;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    width: 100%;
+    margin: 1.25rem 0;
+    margin-top: 600px;   
+}
+
