@@ -3,13 +3,13 @@ html {
 }
 
 .home {
-    background-color: black;
-    background-image: url('Logo\'s/home.png');
-    background-repeat: no-repeat;
-    background-position: top center; 
-    background-size: cover;
-    position: relative;
-    height: 500px;
+  background-color: black;
+  background-image: url('Logo\'s/home.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
 }
 
 .bbh-sans-bartle-regular {
@@ -18,58 +18,52 @@ html {
   font-style: normal;
 }
 
-hr,
-.spacer {
-  border: none;
-  height: 2px;
-  background-color: #000;
-  display: block;
-  width: 100%;
-  margin: 1.25rem 0;
-  margin-top: 600px;   
-}
 
 /* ----------------------- */
 /* Top bar */
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    color: black;
-    background-color: rgba(187, 187, 187, 0.05);
-    backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  color: black;
+  background-color: rgba(187, 187, 187, 0.05);
+  backdrop-filter: blur(8px);
 }
 
-.menu > div {
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    justify-content: space-between;
-    color: #EECB8C;
-    cursor: pointer;
+.menu>div {
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  justify-content: space-between;
+  color: #EECB8C;
+  cursor: pointer;
 }
 
 li {
-    display: inline;
-    margin-right: 15px;
+  display: inline;
+  margin-right: 15px;
 }
 
-a, a:link, a:visited {
-    color: inherit;
-    text-decoration: none;
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
-a:hover, a:focus, a:active {
-    color: inherit;
-    text-decoration: none;
-    outline: none;
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
 }
 
 
@@ -77,30 +71,38 @@ a:hover, a:focus, a:active {
 /* ----------------------- */
 /* Title top of page */
 .top {
-    display:flex;
-    align-items: center;
-    padding-top: 150px;
-    font-size: 40px;
-    justify-content: center;
-    color:white;
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
+  font-size: 40px;
+  justify-content: center;
+  color: white;
 }
 
 .image {
-    background-repeat: no-repeat;
-    background-position: top center; 
-    background-size: cover;
-    position: relative;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
 }
 
 .cursor {
-    display: inline-block;
-    width: 0.6ch;
-    animation: blink 1s steps(1, start) infinite;
+  display: inline-block;
+  width: 0.6ch;
+  animation: blink 1s steps(1, start) infinite;
 }
 
 @keyframes blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0; }
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 
@@ -108,31 +110,31 @@ a:hover, a:focus, a:active {
 /* ----------------------- */
 /* About page */
 .about {
-    display: flex;
-    align-content: center; 
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 90px;
-    box-shadow: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 90px;
+  box-shadow: white;
 }
 
-.about > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    width: 600px;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.231);
-    box-sizing: border-box;
-    padding: 20px; 
-    padding-bottom: 40px;
-    border-radius: 20px;
+.about>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  width: 600px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.231);
+  box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 20px;
 }
 
-.about > div p {
-    font-size: large;
+.about>div p {
+  font-size: large;
 }
 
 
@@ -144,7 +146,8 @@ a:hover, a:focus, a:active {
   --card: rgba(255, 255, 255, 0.231);
   --text: #e6e9f2;
   --muted: #a7b0c4;
-  --accent: #EECB8C; /* subtle teal dev accent */
+  --accent: #EECB8C;
+  /* subtle teal dev accent */
   --ring: rgba(100, 255, 218, 0.25);
 }
 
@@ -182,27 +185,33 @@ a:hover, a:focus, a:active {
 }
 
 @media (max-width: 860px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 560px) {
-  .skills-grid { grid-template-columns: 1fr; }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-card {
   background: var(--card);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 14px;
   padding: 1rem 1rem 1.25rem;
   box-shadow:
-    0 10px 30px rgba(0,0,0,0.35),
-    0 0 0 0 rgba(100,255,218,0); /* ring on hover */
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 0 rgba(100, 255, 218, 0);
+  /* ring on hover */
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .skill-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.45), 0 0 0 6px var(--ring);
-  border-color: rgba(100,255,218,0.35);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), 0 0 0 6px var(--ring);
+  border-color: rgba(100, 255, 218, 0.35);
 }
 
 .skill-card h3 {
@@ -250,7 +259,7 @@ a:hover, a:focus, a:active {
   position: relative;
 }
 
-.contact > div {
+.contact>div {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +371,7 @@ a:hover, a:focus, a:active {
   background-color: #1B2835;
   background-image: url('Logo\'s/projects_bg.jpg');
   background-repeat: no-repeat;
-  background-position: top center; 
+  background-position: top center;
   background-size: cover;
   position: relative;
   height: 600px;
@@ -375,12 +384,16 @@ a:hover, a:focus, a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin-top: 150px;
+  min-height: auto;
+  /* was 100vh; set to auto so consecutive sections stack naturally */
+  padding: 2px 0;
+  /* give some vertical breathing room */
+  margin-top: 400px;
 }
 
+
 /* Glass card */
-.projects > div {
+.projects>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -391,13 +404,14 @@ a:hover, a:focus, a:active {
   padding: 20px 20px 30px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.12);
+  width: 600px;
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Safari */
+  -webkit-backdrop-filter: blur(12px);
+  /* Safari */
   border: 1px solid rgba(255, 255, 255, 0.25);
   outline: 1px solid rgba(255, 255, 255, 0.05);
   color: #fff;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35))
-            drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
 }
 
 
@@ -405,13 +419,50 @@ a:hover, a:focus, a:active {
 /* BLOG LIST – newest on top */
 .blog-list {
   display: flex;
-  flex-direction: column-reverse;   /* <-- newest on top */
-  gap: 2.5rem;                     /* space between entries */
+  flex-direction: column-reverse;
+  /* <-- newest on top */
+  gap: 2.5rem;
+  /* space between entries */
   margin-top: 3rem;
   max-width: 660px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* "Newest:" label styling */
+.newest-label {
+  width: min(600px, 90%);       /* align with your glass card width */
+  margin: 8px auto 12px;        /* centered, tight spacing */
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #EECB8C;               /* same as nav accent */
+  text-transform: none;          /* keep exact casing */
+  display: block;
+}
+
+/* Optional: a small underline accent, similar to your skills h2 */
+.newest-label::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, #EECB8C, transparent);
+  border-radius: 2px;
+}
+
+/* a utility that makes the label use the same width and left alignment */
+.align-card {
+  width: min(600px, 90%); /* same as the card width */
+  margin: 8px auto 12px;  /* centers the 600px block; content starts at same left as the card */
+  text-align: left;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #EECB8C;
+}
+
 
 /* Each entry re-uses the glass-card you already have */
 .project-entry {
@@ -427,8 +478,7 @@ a:hover, a:focus, a:active {
   border: 1px solid rgba(255, 255, 255, 0.25);
   outline: 1px solid rgba(255, 255, 255, 0.05);
   color: #fff;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35))
-          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
 }
 
 /* Title & date */
@@ -437,6 +487,7 @@ a:hover, a:focus, a:active {
   font-size: 1.6rem;
   font-weight: 600;
 }
+
 .entry-date {
   margin-bottom: .8rem;
   font-size: .9rem;
@@ -458,15 +509,17 @@ a:hover, a:focus, a:active {
   overflow: hidden;
   border-radius: 12px;
 }
+
 .youtube-wrapper iframe {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-.intro > div {
+.intro>div {
   width: 600px;
   max-width: 100%;
   margin: 0 auto;
@@ -500,7 +553,8 @@ a:hover, a:focus, a:active {
 #youtube {
   width: 35px;
   height: 35px;
-  fill: white;               /* White by default */
+  fill: white;
+  /* White by default */
   clip-path: circle(65%);
   transition: all 300ms ease-in-out;
 }
@@ -508,7 +562,8 @@ a:hover, a:focus, a:active {
 /* Red background on hover */
 #youtube:hover {
   fill: white;
-  background-color: #f00;    /* YouTube red */
+  background-color: #f00;
+  /* YouTube red */
   border-radius: 50%;
   padding: 6px;
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
@@ -517,10 +572,41 @@ a:hover, a:focus, a:active {
 .youtube {
   background-color: #ff0000;
 }
+
 .youtube svg {
   height: 20px;
   fill: #f2f2f2;
 }
+
 .youtube:hover svg {
   fill: #ff0000;
+}
+
+
+/* Optional: keep the glass card width consistent */
+.projects>div {
+  width: 600px;
+}
+
+/* Keep contact centered and directly below */
+.contact {
+  margin-top: 0;
+  /* remove large gap */
+  padding-bottom: 24px;
+}
+
+/* Match the navigation font color and control length */
+.section-divider {
+  border: none;
+  /* remove default border */
+  height: 2px;
+  /* thickness of the line */
+  background-color: #EECB8C;
+  /* same as .menu text color */
+  width: 700px;
+  /* set the length explicitly */
+  margin: 12px auto;
+  /* center it horizontally */
+  border-radius: 2px;
+  /* optional: soften ends */
 }
