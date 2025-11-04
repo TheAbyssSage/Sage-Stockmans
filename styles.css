@@ -433,17 +433,13 @@ a:active {
 
 /* "Newest:" label styling */
 .newest-label {
-  width: min(600px, 90%);
-  /* align with your glass card width */
-  margin: 8px auto 12px;
-  /* centered, tight spacing */
+  width: min(600px, 90%);       /* align with your glass card width */
+  margin: 8px auto 12px;        /* centered, tight spacing */
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  color: #EECB8C;
-  /* same as nav accent */
-  text-transform: none;
-  /* keep exact casing */
+  color: #EECB8C;               /* same as nav accent */
+  text-transform: none;          /* keep exact casing */
   display: block;
 }
 
@@ -460,10 +456,8 @@ a:active {
 
 /* a utility that makes the label use the same width and left alignment */
 .align-card {
-  width: min(600px, 90%);
-  /* same as the card width */
-  margin: 8px auto 12px;
-  /* centers the 600px block; content starts at same left as the card */
+  width: min(600px, 90%); /* same as the card width */
+  margin: 8px auto 12px;  /* centers the 600px block; content starts at same left as the card */
   text-align: left;
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 1rem;
