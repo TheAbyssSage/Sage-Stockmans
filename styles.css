@@ -148,8 +148,7 @@ a:active {
   --text: #e6e9f2;
   --muted: #a7b0c4;
   --accent: #EECB8C;
-  /* subtle teal dev accent */
-  --ring: rgba(100, 255, 218, 0.25);
+  --ring: #eecc8cd4;
 }
 
 .skills {
@@ -205,7 +204,6 @@ a:active {
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.35),
     0 0 0 0 rgba(100, 255, 218, 0);
-  /* ring on hover */
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
@@ -388,9 +386,7 @@ a:active {
   justify-content: center;
   align-items: center;
   min-height: auto;
-  /* was 100vh; set to auto so consecutive sections stack naturally */
   padding: 2px 0;
-  /* give some vertical breathing room */
   margin-top: 400px;
 }
 
@@ -410,7 +406,6 @@ a:active {
   width: 600px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  /* Safari */
   border: 1px solid rgba(255, 255, 255, 0.25);
   outline: 1px solid rgba(255, 255, 255, 0.05);
   color: #fff;
@@ -423,9 +418,7 @@ a:active {
 .blog-list {
   display: flex;
   flex-direction: column-reverse;
-  /* <-- newest on top */
   gap: 2.5rem;
-  /* space between entries */
   margin-top: 3rem;
   max-width: 660px;
   margin-left: auto;
@@ -434,17 +427,16 @@ a:active {
 
 /* "Newest:" label styling */
 .newest-label {
-  width: min(600px, 90%);       /* align with your glass card width */
-  margin: 8px auto 12px;        /* centered, tight spacing */
+  width: min(600px, 90%);
+  margin: 8px auto 12px;
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  color: #EECB8C;               /* same as nav accent */
-  text-transform: none;          /* keep exact casing */
+  color: #EECB8C;
+  text-transform: none;
   display: block;
 }
 
-/* Optional: a small underline accent, similar to your skills h2 */
 .newest-label::after {
   content: "";
   display: block;
@@ -455,10 +447,9 @@ a:active {
   border-radius: 2px;
 }
 
-/* a utility that makes the label use the same width and left alignment */
 .align-card {
-  width: min(600px, 90%); /* same as the card width */
-  margin: 8px auto 12px;  /* centers the 600px block; content starts at same left as the card */
+  width: min(600px, 90%);
+  margin: 8px auto 12px;
   text-align: left;
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 1rem;
@@ -466,8 +457,6 @@ a:active {
   color: #EECB8C;
 }
 
-
-/* Each entry re-uses the glass-card you already have */
 .project-entry {
   display: flex;
   flex-direction: column;
