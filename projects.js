@@ -28,3 +28,121 @@ function calculate() {
     } 
 }
 
+
+// ToDo List
+// setup listener & get all existing todo from localStorage
+function init() {
+  // get the elements of my DOM
+  const addBtn = document.getElementById("addBtn");
+  const todoInput = document.getElementById("todoInput");
+
+  const todosJsonString = '[{"id":1731597966001,"text":"Vacuum the living room"},{"id":1731597966002,"text":"Wash the dishes"},{"id":1731597966003,"text":"Fold the laundry"},{"id":1731597966004,"text":"Dust the shelves"},{"id":1731597966005,"text":"Mop the kitchen floor"},{"id":1731597966006,"text":"Clean the bathroom mirror"},{"id":1731597966007,"text":"Water the plants"},{"id":1731597966008,"text":"Wipe the kitchen counters"},{"id":1731597966009,"text":"Change the bed sheets"},{"id":1731597966010,"text":"Empty the trash bins"},{"id":1731597966011,"text":"Clean the fridge"},{"id":1731597966012,"text":"Scrub the stove top"},{"id":1731597966013,"text":"Organize the pantry"},{"id":1731597966014,"text":"Wipe window sills"},{"id":1731597966015,"text":"Sweep the hallway"},{"id":1731597966016,"text":"Clean the microwave"},{"id":1731597966017,"text":"Rinse recycling and sort"},{"id":1731597966018,"text":"Tidy up the playroom"},{"id":1731597966019,"text":"Disinfect door handles"},{"id":1731597966020,"text":"Wipe the dining table"}]';
+
+  // Seed sample todos only if nothing is already stored (don't overwrite user data)
+  if (!localStorage.getItem('todos')) {
+    localStorage.setItem('todos', todosJsonString);
+  }
+
+  // setup my event listeners
+  addBtn.addEventListener("click", addTodo);
+
+  todoInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      addTodo();
+    }
+  });
+  displayTodos();
+}
+
+function addTodo() {
+  const todoInput = document.getElementById("todoInput");
+  if (!todoInput) return;
+
+  const text = todoInput.value.trim();
+  if (text === "") {
+    // nothing to add
+    return;
+  }
+
+  const todos = getTodosFromStorage();
+  const newTodo = {
+    id: Date.now(),
+    text: text,
+  };
+
+  todos.push(newTodo);
+  localStorage.setItem('todos', JSON.stringify(todos));
+
+  // clear input and refresh list
+  todoInput.value = "";
+  displayTodos();
+}
+
+// Iterate the todo's in the dom structure
+function displayTodos() {
+  console.log("displaying todo");
+  // identify the placeholder as an element
+  const todoList = document.getElementById("todoList");
+
+  // get todo's from the localstorage
+  const todos = getTodosFromStorage();
+  console.log(todos);
+  // clear the current list
+  todoList.innerHTML = "";
+
+  if (todos.length === 0) {
+    // show empty message
+    todoList.innerHTML =
+      '<li class="list-group-item">No notes yet... write some</li>';
+    return;
+  }
+
+  // render todos
+  todos.forEach((t) => {
+    const li = document.createElement('li');
+    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+
+    const span = document.createElement('span');
+    span.textContent = t.text;
+
+    const delBtn = document.createElement('button');
+    delBtn.className = 'btn btn-sm btn-danger delete-btn';
+    delBtn.textContent = 'Delete';
+    delBtn.dataset.id = String(t.id);
+    delBtn.addEventListener('click', (e) => {
+      const id = Number(e.currentTarget.dataset.id);
+      deleteTodo(id);
+    });
+
+    li.appendChild(span);
+    li.appendChild(delBtn);
+    todoList.appendChild(li);
+  });
+}
+
+function deleteTodo(id) {
+  const todos = getTodosFromStorage();
+  const filtered = todos.filter((t) => t.id !== id);
+  localStorage.setItem('todos', JSON.stringify(filtered));
+  displayTodos();
+}
+
+function getTodosFromStorage() {
+  // get the strings from localstorage
+  const todosString = localStorage.getItem("todos");
+
+  // if nothing is stores yet, return an empty array
+  if (todosString === null) {
+    return [];
+  }
+
+  // Parse  JSON string back into an array
+  return JSON.parse(todosString);
+}
+
+init();
+
+function clearAllTodos() {
+  localStorage.setItem('todos', JSON.stringify([]));
+  displayTodos();
+}

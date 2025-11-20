@@ -8,15 +8,16 @@
   <title>Sage Stockmans</title>
 
   <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="Logo's/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="Logo's/favicon.svg" />
-  <link rel="shortcut icon" href="Logo\s/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="Logo\s/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="Images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
+  <link rel="shortcut icon" href="Images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Sage Stockmans" />
-  <link rel="manifest" href="Logo\s/site.webmanifest" />
+  <link rel="manifest" href="Images/site.webmanifest" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,18 +31,31 @@
   <!-- Top menu -->
   <div class="menu">
 
-    <div class="homeback">
+    <div>
       <img class="image" src="Images/logo-t.png" alt="car" height="50px" width="auto" href="#home">
     </div>
 
     <!-- Navigation menu -->
-    <div class="">
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#aboutme">ABOUT ME</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-      </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutme">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
   </div>
 
@@ -53,64 +67,79 @@
     </div>
   </div>
 
-  <!-- <div id="aboutme"> </div> -->
 
-  <div style="margin-bottom: 600px;" id="aboutme"> </div>
-
-  <hr id="aboutme" style="border:0; height:1px; background-color:#000; margin-bottom:80px;">
+  <div id="aboutme"></div>
 
 
   <!-- About me -->
-  <div class="about" style="margin-top: 30px;">
+  <div class="about">
 
-    <!-- Title -->
-    <div>
+
+    <!-- Title + text -->
+    <div class="about-text hp">
       <h2 class="bbh-sans-bartle-regular">About Me</h2>
-      <p>Hello,</p>
-      <p>my name is Sage Stockmans. Born in Belgium with American roots, I'm fluent in Dutch and English, and I thrive
-        in high-pressure environments where quick learning and level-headed decision-making are key.</p>
-      <p>I'm currently a student at SyntraPXL, pursuing the Full Stack Developer program. I chose this path for the
-        creative freedom it offers—building complete solutions from the ground up, at my fingertips, without breaking
-        the bank.</p>
-      <p>A dedicated team player and fast learner, I'm equally comfortable working on-site or remotely. I'm always eager
-        to tackle new challenges and contribute meaningfully to any project.</p>
+      <div class="content">
+        <p>Hello,</p>
+        <p>my name is Sage Stockmans. Born in Belgium with American roots, I'm fluent in Dutch and English, and I thrive
+          in high-pressure environments where quick learning and level-headed decision-making are key.</p>
+        <p>I'm currently a student at SyntraPXL, pursuing the Full Stack Developer program. I chose this path for the
+          creative freedom it offers—building complete solutions from the ground up, at my fingertips, without breaking
+          the bank.</p>
+        <p>A dedicated team player and fast learner, I'm equally comfortable working on-site or remotely. I'm always
+          eager
+          to tackle new challenges and contribute meaningfully to any project.</p>
+      </div>
     </div>
 
-    <div style="width: auto; margin-left: 15px;">
-      <img src="Images/DSC_0568.JPG" height="auto" width="300px" style="border-radius: 20px;">
+    <!-- Image -->
+    <div class="about-image">
+      <img src="Images/DSC_0568.JPG" alt="Sage" class="img-fluid person">
     </div>
 
   </div>
+
+
+
+
+
 
   <!-- Skills Section -->
   <section class="skills">
     <h2>Skills</h2>
 
-    <div class="skills-grid">
-      <article class="skill-card">
-        <h3>Backend</h3>
-        <ul>
-          <li><span>PHP (OOP)</span></li>
-          <li><span>Laravel (basiskennis)</span></li>
-          <li><span>API's</span></li>
-          <li><span>Databases · ontwerp · normalisatie</span></li>
-        </ul>
-      </article>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="skill-card">
+            <h3>Backend</h3>
+            <ul>
+              <li><span>PHP (OOP)</span></li>
+              <li><span>Laravel (basiskennis)</span></li>
+              <li><span>API's</span></li>
+              <li><span>Databases · ontwerp · normalisatie</span></li>
+            </ul>
+          </article>
+        </div>
 
-      <article class="skill-card">
-        <h3>Frontend</h3>
-        <ul>
-          <li><span>JavaScript (JS)</span></li>
-          <li><span>Angular</span></li>
-        </ul>
-      </article>
+        <div class="col-md-4">
+          <article class="skill-card">
+            <h3>Frontend</h3>
+            <ul>
+              <li><span>JavaScript (JS)</span></li>
+              <li><span>Angular</span></li>
+            </ul>
+          </article>
+        </div>
 
-      <article class="skill-card">
-        <h3>Workflow</h3>
-        <ul>
-          <li><span>Agile & Scrum</span></li>
-        </ul>
-      </article>
+        <div class="col-md-4">
+          <article class="skill-card">
+            <h3>Workflow</h3>
+            <ul>
+              <li><span>Agile & Scrum</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -162,6 +191,7 @@
   </div>
 
   <br>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
